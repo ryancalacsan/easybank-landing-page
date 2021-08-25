@@ -20,6 +20,10 @@ body {
   font-weight: 400;
 }
 
+body.noscroll {
+  overflow: hidden;
+}
+
 a,
 a:visited,
 a:hover {
@@ -96,7 +100,7 @@ button,
 .header .overlay {
   opacity: 0;
   position: fixed;
-  top: 3.75rem;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -105,6 +109,8 @@ button,
 }
 
 .header nav {
+  position: relative;
+  background-color: white;
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
 }
@@ -194,6 +200,10 @@ button,
   opacity: 0.75;
 }
 
+.has-fade {
+  visibility: hidden;
+}
+
 @-webkit-keyframes fade-in {
   from {
     visibility: hidden;
@@ -204,6 +214,7 @@ button,
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -218,13 +229,14 @@ button,
     opacity: 0;
   }
   to {
+    visibility: visible;
     opacity: 1;
   }
 }
 
 .fade-in {
-  -webkit-animation: fade-in 300ms ease-in-out forwards;
-          animation: fade-in 300ms ease-in-out forwards;
+  -webkit-animation: fade-in 200ms ease-in-out forwards;
+          animation: fade-in 200ms ease-in-out forwards;
 }
 
 @-webkit-keyframes fade-out {
@@ -258,7 +270,7 @@ button,
 }
 
 .fade-out {
-  -webkit-animation: fade-out 300ms ease-in-out forwards;
-          animation: fade-out 300ms ease-in-out forwards;
+  -webkit-animation: fade-out 200ms ease-in-out forwards;
+          animation: fade-out 200ms ease-in-out forwards;
 }
 /*# sourceMappingURL=style.css.map */
